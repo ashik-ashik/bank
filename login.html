@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In to Banking</title>
+  <link rel="shortcut icon" href="https://ashik-ashik.github.io/img/cool-shop/ashik.ico" type="image/x-icon">
+
+  <!-- fontawesomw -->
+  <script src="https://kit.fontawesome.com/7776e10779.js" crossorigin="anonymous"></script>
+
+  <!-- tailwind css -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="login-main">
+    <section class="login w-full py-32">
+      <div class="container w-4/5 mx-auto grid grid-cols-2 gap-6">
+        <div class=" bg-blue-200 p-4 login-form-box">
+          <div class="text-center login-header">
+            <h2 class="text-4xl  font-black uppercase text-white mb-6">Log In</h2>
+            <img src="./img/login.png" class="login-img mx-auto" alt="">
+          </div>
+        <form action="" class="mt-8">
+          <div class="form-field relative flex items-center">
+            <p class="absolute bottom-full right-0 mb-1 py-2 px-4 bg-gray-900 text-white text-xs hidden" id="emailErr"></p>
+            <i class="py-3 px-6 bg-gray-900 rounded-tl-full rounded-bl-full border border-gray-900 border-r-0 text-white fas fa-user"></i>
+            <input type="email" name="email" id="userEmail" class="border rounded-tr-full rounded-br-full border-l-0 border-gray-900 outline-none p-2 w-full placeholder-blue-800" placeholder="Email">
+          </div>
+          <div class="form-field mt-3 relative flex items-center">
+            <div class="absolute hidden bottom-full left-0 mb-1 w-72 bg-gray-800 py-4 px-3" id="password-error">
+              <h4 class="text-lg mb-3 text-white">Password Requirnments:</h4>
+              <p class="matching text-sm" id="letters">Letters</p>
+              <p class="matching text-sm" id="uppercase">Uppercase Letter</p>
+              <p class="matching text-sm" id="number">Numbers</p>
+              <p class="matching text-sm" id="special">Symbols</p>
+              <p class="matching text-sm" id="length">Minimun 8 characters</p>
+            </div>
+            <i class="py-3 px-6 bg-gray-900 rounded-tl-full rounded-bl-full border border-gray-900 border-r-0 text-white fas fa-key"></i>
+            <input type="password" name="password" id="userPassword" class="border rounded-tr-full rounded-br-full border-l-0 border-gray-900 outline-none p-2 w-full placeholder-blue-800" placeholder="Password">
+          </div>
+          <input type="submit" value="Log In" id="login" class="mt-4 ml-auto inline-block rounded-full px-24 py-2 border-0 text-sm font-bold uppercase letter-spacing-1 bg-red-700 text-white cursor-pointer hover:bg-indigo-600 transition">
+        </form>
+        </div>
+
+        <div class="image">
+          <img src="./img/grow.png" class="w-3/4 ml-auto" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/login.js"></script>
+</body>
+</html>

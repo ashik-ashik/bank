@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bankign Accounting</title>
+  <link rel="shortcut icon" href="https://ashik-ashik.github.io/img/cool-shop/ashik.ico" type="image/x-icon">
+
+    <!-- fontawesomw -->
+    <script src="https://kit.fontawesome.com/7776e10779.js" crossorigin="anonymous"></script>
+
+  <!-- tailwind css -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <main>
+    <section class="hero">
+      <div class="container mx-auto w-4/5 text-center py-32">
+        <h2 class="text-white font-black text-3xl uppercase">Money Bankign</h2>
+        <p class="text-white text-xl font-black mt-3">Dashboard</p>
+      </div>
+    </section>
+
+    <section class="dashboard py-12">
+      <div class="container mx-auto w-4/5 grid grid-cols-4 gap-6">
+        <div class="box p-9 text-center">
+          <img src="./img/user.png" class="w-3/5 block mx-auto" alt="">
+          <h4 class="text-xl text-white font-black mt-3">Ashik Ali</h4>
+        </div>
+        <div class="box p-9 text-center">
+          <img src="./img/dollar.png" class="w-2/5 block mx-auto" alt="">
+          <h4 class="text-xl text-white font-black mt-3">Deposit</h4>
+          <h3 class="text-2xl text-white font-black mt-4">$<span id="deposit">387.00</span></h3>
+        </div>
+        <div class="box p-9 text-center">
+          <img src="./img/bank.png" class="w-2/5 block mx-auto" alt="">
+          <h4 class="text-xl text-white font-black mt-3">Balance</h4>
+          <h3 class="text-2xl text-white font-black mt-4">$<span id="totalBalance">1000.00</span></h3>
+        </div>
+        <div class="box p-9 text-center">
+          <img src="./img/card.png" class="w-2/5 block mx-auto" alt="">
+          <h4 class="text-xl text-white font-black mt-3">Withdraw</h4>
+          <h3 class="text-2xl text-white font-black mt-4">$<span id="withdraw">134.00</span></h3>
+        </div>
+      </div>
+      <div class="container w-4/5 mx-auto pt-8  grid grid-cols-4 gap-6">
+        <div class="box p-4">
+          <h3 class="text-white text-3xl">Dashboard</h3>
+        </div>
+        <div class="col-span-3">
+          <div class="header p-4 ">
+            <h3 class="text-white text-3xl">Deposit and Withdraw</h3>
+          </div>
+          <div class="pt-6 grid grid-cols-2 gap-4">
+            <div class="box p-4">
+              <h4 class="text-xl text-white font-black mb-3">Deposit Ammount:</h4>
+              <form action="">
+                <div class="input-field">
+                  <input type="text" name="deposit" id="deposit-input" class="border border-blue-300 outline-none p-2 w-full" placeholder="$ deposit ammount e.g 1000">
+                </div>
+                <input type="submit" value="Deposit" id="deposit-submit" class="py-2 px-12 bg-green-600 text-white text-sm uppercase transition cursor-pointer mt-4 hover:bg-blue-700 tracking-wide">
+              </form>
+            </div>
+            <div class="box p-4">
+              <h4 class="text-xl text-white font-black mb-3">Withdraw Ammount:</h4>
+              <form action="">
+                <div class="input-field">
+                  <input type="text" name="withdraw" id="withdraw-input" class="border border-blue-300 outline-none p-2 w-full" placeholder="$ withdraw ammount e.g 1000">
+                </div>
+                <input type="submit" value="Withdraw" id="withdraw-submit" class="py-2 px-12 bg-red-600 text-white text-sm uppercase transition cursor-pointer mt-4 hover:bg-yellow-700 tracking-wide">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="confirmation" class="hidden fixed w-full h-screen top-0 left-0 flex items-center justify-center">
+      <div class="confirm-box w-2/5 bg-purple-900 px-6 py-12 text-center relative">
+        <button class="close"><i class="far fa-times-circle text-white text-3xl"></i></button>
+        <img src="" id="comformation-img" class="w-24 block mx-auto" alt="">
+        <h2 class="text-4xl text-white my-3" id="conformation-title"></h2>
+        <h2 class="text-6xl text-yellow-400 font-black" id="status">Done!</h2>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="./js/bank.js"></script>
+
+</body>
+</html>
