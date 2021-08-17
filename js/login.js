@@ -158,3 +158,15 @@ function selectId(whice, what){
     return document.getElementById(`${whice}`).classList.remove("ok");
   }
 }
+
+document.getElementById("password-show").addEventListener("change", (e) => {
+  if(e.target.checked){
+    document.getElementById("userPassword").type = "text";
+    document.getElementById("eye-icon").classList.add("fa-eye-slash");
+    document.getElementById("eye-icon").classList.remove("fa-eye");
+  }else{
+    document.getElementById("userPassword").type = "password";
+    document.getElementById("eye-icon").classList.remove("fa-eye-slash");
+    document.getElementById("eye-icon").classList.add("fa-eye");
+  }
+})
